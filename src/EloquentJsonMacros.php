@@ -19,6 +19,20 @@ class EloquentJsonMacros
     }
 
     /**
+     * Format value
+     *
+     * @param mixed $value
+     * @return mixed
+     */
+    public static function formatValue($value)
+    {
+        if(is_string($value)) {
+            return "'" . $value. "'";
+        }
+        return $value;
+    }
+
+    /**
      * Formatting needle
      *
      * @param string $needle
