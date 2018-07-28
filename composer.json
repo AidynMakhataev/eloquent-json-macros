@@ -1,0 +1,38 @@
+{
+    "name": "aidynmakhataev/eloquent-json-macros",
+    "description": "A Laravel Eloquent Builder macros for MySQL JSON functions",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Aidyn Makhataev",
+            "email": "makataev.7@gmail.com",
+            "homepage": "https://github.com/AidynMakhataev"
+        }
+    ],
+    "homepage": "https://github.com/AidynMakhataev/eloquent-json-macros",
+    "keywords": ["Laravel", "EloquentJsonMacros", "Eloquent Json"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AidynMakhataev\\EloquentJsonMacros\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AidynMakhataev\\EloquentJsonMacros\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AidynMakhataev\\EloquentJsonMacros\\EloquentJsonMacrosServiceProvider"
+            ]
+        }
+    }
+}
