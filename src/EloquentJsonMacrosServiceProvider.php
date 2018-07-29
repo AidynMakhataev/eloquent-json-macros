@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 class EloquentJsonMacrosServiceProvider extends ServiceProvider
 {
-    
     /**
      * Register any package services.
      *
@@ -26,5 +25,4 @@ class EloquentJsonMacrosServiceProvider extends ServiceProvider
                 require_once $path;
             });
     }
-
 }
