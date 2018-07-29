@@ -2,6 +2,14 @@
 
 <p align="center">This package helps you to use MySQL JSON functions in Eloquent style and as helper functions.</p>
 
+<p align="center">
+<a href="https://packagist.org/packages/aidynmakhataev/eloquent-json-macros"><img src="https://poser.pugx.org/aidynmakhataev/eloquent-json-macros/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/aidynmakhataev/eloquent-json-macros"><img src="https://poser.pugx.org/aidynmakhataev/eloquent-json-macros/v/unstable.svg" alt="Latest Unstable Version"></a>
+<a href="https://styleci.io/repos/142687239"><img src="https://github.styleci.io/repos/142687239/shield"></a>
+<a href="https://packagist.org/packages/aidynmakhataev/eloquent-json-macros"><img src="https://poser.pugx.org/aidynmakhataev/eloquent-json-macros/downloads" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/aidynmakhataev/eloquent-json-macros"><img src="https://poser.pugx.org/aidynmakhataev/eloquent-json-macros/license" alt="License"></a>
+</p>    
+
 ## Installation
 
 You can install the package using composer
