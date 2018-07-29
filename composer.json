@@ -1,7 +1,7 @@
 {
     "name": "aidynmakhataev/eloquent-json-macros",
     "description": "A Laravel Eloquent Builder macros for MySQL JSON functions",
-    "license": "license",
+    "license": "MIT",
     "authors": [
         {
             "name": "Aidyn Makhataev",
