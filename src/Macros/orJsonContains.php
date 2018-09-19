@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Builder;
 use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
 
 /*
- * Add a orWhere "json_contains" clause to the query.
+ * Add an orWhere "json_contains" clause to the query.
  *
  * @param string $path
  * @param string $needle

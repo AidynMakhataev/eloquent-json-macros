@@ -19,5 +19,7 @@ Builder::macro('whereJsonExtract', function ($path, $operator = null, $value = n
         $value, $operator, func_num_args() === 2
     );
 
-    return $this->whereRaw("JSON_UNQUOTE(JSON_EXTRACT($column, '$path')) $operator '$value'");
+    return $this->whereRaw("JSON_UNQUOTE(JSON_EXTRACT($column, '$path')) $operator :value", [
+        'value' => $value
+    ]);
 });

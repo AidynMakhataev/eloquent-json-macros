@@ -12,7 +12,7 @@ use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
  *
  * @return Builder
  */
-Builder::macro('whereJsonContainsPath', function ($column, $path, $oneOrAll = 'one') {
+Builder::macro('whereJsonContainsPath', function (string $column, $path, string $oneOrAll = 'one') {
     if (is_array($path)) {
         foreach ($path as $key => $item) {
             $path[$key] = "'".EloquentJsonMacros::formatJsonPath($item)."'";

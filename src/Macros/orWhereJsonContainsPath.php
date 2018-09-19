@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Builder;
 use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
 
 /*
- * Add a orWhere "json_contains_path" clause to the query.
+ * Add an orWhere "json_contains_path" clause to the query.
  *
  * @param string $column
  * @param mixed $path

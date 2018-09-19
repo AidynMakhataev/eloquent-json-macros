@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Builder;
 use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
 
 /*
- * Add a orWhere "json_extract" clause to the query.
+ * Add an orWhere "json_extract" clause to the query.
  *
  * @param string $path
  * @param mixed  $operator
@@ -19,5 +19,7 @@ Builder::macro('orWhereJsonExtract', function ($path, $operator = null, $value =
         $value, $operator, func_num_args() === 2
     );
 
-    return $this->whereRaw("JSON_UNQUOTE(JSON_EXTRACT($column, '$path')) $operator '$value'");
+    return $this->whereRaw("JSON_UNQUOTE(JSON_EXTRACT($column, '$path')) $operator :value", [
+        'value' => $value
+    ]);
 });

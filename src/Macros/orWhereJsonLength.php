@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Builder;
 use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
 
 /*
- * Add a orWhere "json_length" clause to the query.
+ * Add an orWhere "json_length" clause to the query.
  *
  * @param string $path
  * @param mixed  $operator
@@ -19,5 +19,7 @@ Builder::macro('orWhereJsonLength', function ($path, $operator = null, $value = 
         $value, $operator, func_num_args() === 2
     );
 
-    return $this->orWhereRaw("JSON_LENGTH($path) $operator '$value'");
+    return $this->orWhereRaw("JSON_LENGTH($path) $operator :value", [
+        'value' => $value
+    ]);
 });
