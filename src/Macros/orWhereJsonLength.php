@@ -20,6 +20,6 @@ Builder::macro('orWhereJsonLength', function ($path, $operator = null, $value = 
     );
 
     return $this->orWhereRaw("JSON_LENGTH($path) $operator :value", [
-        'value' => $value
+        'value' => $value,
     ]);
 });
