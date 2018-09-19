@@ -20,6 +20,6 @@ Builder::macro('orWhereJsonExtract', function ($path, $operator = null, $value =
     );
 
     return $this->whereRaw("JSON_UNQUOTE(JSON_EXTRACT($column, '$path')) $operator :value", [
-        'value' => $value
+        'value' => $value,
     ]);
 });
