@@ -12,6 +12,6 @@ use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
  *
  * @return Builder
  */
-Builder::macro('orWhereJsonContainsCaseInsensitive', function (string $column, $node, $value, $not = false) {
-    return $this->whereJsonContainsCaseInsensitive($column, $node, $value, $not, true);
+Builder::macro('orWhereJsonContainsCaseInsensitive', function (string $column, $node, $value, $not = false, $start = false) {
+    return $this->whereJsonContainsCaseInsensitive($column, $node, $value, $not, true, $start);
 });
