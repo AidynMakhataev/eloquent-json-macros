@@ -12,7 +12,7 @@ use AidynMakhataev\EloquentJsonMacros\EloquentJsonMacros;
  *
  * @return Builder
  */
-Builder::macro('orWhereJsonContainsPath', function ($column, $path, $oneOrAll = 'one') {
+Builder::macro('orWhereJsonContainsPath', function ($column, $path, $oneOrAll = 'one', $not = false) {
     if (is_array($path)) {
         foreach ($path as $key => $item) {
             $path[$key] = "'".EloquentJsonMacros::formatJsonPath($item)."'";
@@ -21,6 +21,6 @@ Builder::macro('orWhereJsonContainsPath', function ($column, $path, $oneOrAll = 
     } else {
         $path = "'".EloquentJsonMacros::formatJsonPath($path)."'";
     }
-
-    return $this->orWhereRaw("JSON_CONTAINS_PATH($column, '$oneOrAll', $path)");
+    
+    return ($not)?$this->orWhereRaw("NOT JSON_CONTAINS_PATH($column, '$oneOrAll', $path)"):$this->orWhereRaw("JSON_CONTAINS_PATH($column, '$oneOrAll', $path)");
 });
