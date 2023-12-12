@@ -22,5 +22,5 @@ Builder::macro('orWhereJsonContainsPath', function ($column, $path, $oneOrAll = 
         $path = "'".EloquentJsonMacros::formatJsonPath($path)."'";
     }
     
-    return ($not)?$this->whereRaw("NOT JSON_CONTAINS_PATH($column, '$oneOrAll', $path)"):$this->whereRaw("JSON_CONTAINS_PATH($column, '$oneOrAll', $path)");
+    return ($not)?$this->orWhereRaw("NOT JSON_CONTAINS_PATH($column, '$oneOrAll', $path)"):$this->orWhereRaw("JSON_CONTAINS_PATH($column, '$oneOrAll', $path)");
 });
