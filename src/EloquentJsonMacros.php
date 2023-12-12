@@ -12,7 +12,7 @@ class EloquentJsonMacros
      */
     public static function formatJsonPath($path): string
     {
-        if (starts_with($path, '[')) {
+        if (str_starts_with($path, '[')) {
             return "$$path";
         }
 
